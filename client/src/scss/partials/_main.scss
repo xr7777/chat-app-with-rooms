@@ -1,0 +1,33 @@
+@import './base';
+
+.main {
+  height: 100vh;
+  @include flex-d-a-j(column, center, center);
+  text-align: center;
+
+  &__heading {
+    @include font-s-c-w(3rem, $white, $bolder);
+    margin: 1rem 0;
+  }
+  &__sub-heading {
+    @include font-s-c-w(1.8rem, $white, $bolder);
+  }
+  &__form {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    &__input {
+      margin: 1rem 0;
+      @include flex-d-a-j(row, center, center);
+      p {
+        margin-right: 1rem;
+      }
+      input {
+        @include input;
+        width: 15rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+}

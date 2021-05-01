@@ -1,0 +1,20 @@
+@import './base';
+
+.message {
+  @include font-s-c-w(0.9rem, $white, $bolder);
+  &__user {
+    color: rgba($color: #fff, $alpha: 0.7);
+  }
+}
+
+.message__box {
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #90afc4;
+  margin: 0.5rem 0;
+  &--active {
+    background-color: #1a4568;
+    margin-left: auto;
+  }
+}

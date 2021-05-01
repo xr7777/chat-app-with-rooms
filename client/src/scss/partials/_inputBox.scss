@@ -1,0 +1,16 @@
+@import './base';
+
+.inputBox {
+  width: 100%;
+  @include flex-d-a-j(row, flex-start, flex-start);
+
+  input {
+    @include input;
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import './base';
+
+.chatRoom {
+  width: 100%;
+  height: 50vh;
+  @include flex-d-a-j(column, flex-start, flex-start);
+  &__heading {
+    @include flex-d-a-j(row, center, flex-start);
+    @include font-s-c-w(1.5rem, $white, $extra-bold);
+    width: 100%;
+    background-color: $button-color;
+    padding: 0.1rem 1rem;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+    }
+  }
+  &__messages {
+    width: 100%;
+    background-color: $white;
+    flex: 1;
+    padding: 0rem 1rem;
+    overflow-y: scroll;
+  }
+}

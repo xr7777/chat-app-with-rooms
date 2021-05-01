@@ -1,0 +1,37 @@
+@import './base';
+@import './chat';
+@import './chatRoom';
+@import './inputBox';
+@import './main';
+@import './message';
+
+.wrapper {
+  @include flex-d-a-j(column, center, center);
+  min-height: 100vh;
+  background-color: $dark-blue;
+}
+
+.container {
+  @include flex-d-a-j(column, flex-start, flex-start);
+  width: 45%;
+}
+
+.button {
+  @include font-s-c-w(1.3rem, $white, $bolder);
+  background-color: $button-color;
+  outline: 0;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  &.button--send {
+    border-radius: 0;
+  }
+}
+
+.icon--online {
+  margin-right: 0.8rem;
+}
+.icon--close {
+  margin-left: auto;
+  cursor: pointer;
+}

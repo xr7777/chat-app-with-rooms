@@ -8,7 +8,19 @@ const InputBox: React.FC<InputBoxProps> = ({
   sendMessage,
   setMessage,
 }) => {
-  return <div></div>;
+  return (
+    <form className="inputBox">
+      <input
+        type="text"
+        placeholder="Type a message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <button className="button button--send" onClick={(e) => sendMessage(e)}>
+        Send
+      </button>
+    </form>
+  );
 };
 
 export default InputBox;

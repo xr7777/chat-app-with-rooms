@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&display=swap');
+
+$dark-blue: rgb(11, 26, 48);
+$blue: rgba(44, 63, 89, 1);
+$grayish-blue: rgba(88, 102, 115, 1);
+$skyblue: rgba(160, 206, 217, 1);
+$dark-skyblue: rgba(133, 153, 166, 1);
+$emerald: rgba(136, 242, 232, 1);
+$white: rgba(245, 245, 245, 1);
+$black: rgba(0, 0, 0, 1);
+$button-color: #6389e0;
+$extra-light: 300;
+$light: 400;
+$bolder: 700;
+$extra-bold: 900;
+
+@mixin flex-d-a-j($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font-s-c-w($size, $color, $weight) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin input {
+  outline: 0;
+  color: $white;
+  border: none;
+  background-color: $blue;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 19px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  color: $white;
+}
