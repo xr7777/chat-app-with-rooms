@@ -4,16 +4,17 @@
 @import './inputBox';
 @import './main';
 @import './message';
+@import './users';
 
 .wrapper {
-  @include flex-d-a-j(column, center, center);
+  @include flex-d-a-j(row, center, center);
   min-height: 100vh;
   background-color: $dark-blue;
 }
 
 .container {
   @include flex-d-a-j(column, flex-start, flex-start);
-  width: 45%;
+  width: 50%;
 }
 
 .button {

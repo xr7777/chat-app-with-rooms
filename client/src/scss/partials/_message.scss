@@ -11,8 +11,11 @@
   width: 10rem;
   padding: 0.5rem;
   border-radius: 10px;
-  background-color: #90afc4;
+  background-color: #db9b96;
   margin: 0.5rem 0;
+  &.admin {
+    background-color: #90afc4;
+  }
   &--active {
     background-color: #1a4568;
     margin-left: auto;

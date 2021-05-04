@@ -14,7 +14,7 @@ const Message: React.FC<MessageProps> = ({ message, name }) => {
       <p className="message__text">{message.text}</p>
     </div>
   ) : (
-    <div className="message__box ">
+    <div className={`message__box ${message.user === 'admin' && 'admin'}`}>
       <p className="message__text">{message.text}</p>
       <p className="message__user">- {message.user}</p>
     </div>
