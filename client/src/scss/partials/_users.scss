@@ -16,8 +16,18 @@
   }
   &__user {
     @include flex-d-a-j(row, center, flex-start);
-    img {
+    margin: 0.5rem 0;
+    .avatar {
       margin-right: 10px;
+      width: 1.7rem;
+      border-radius: 50%;
     }
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-left: 0;
+    margin: 2rem 0;
+    height: auto;
+    min-height: auto;
   }
 }

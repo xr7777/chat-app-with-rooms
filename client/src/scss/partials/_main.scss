@@ -4,17 +4,16 @@
   height: 100vh;
   @include flex-d-a-j(column, center, center);
   text-align: center;
-
   &__heading {
-    @include font-s-c-w(3rem, $white, $bolder);
+    @include font-s-c-w(2.5rem, $white, $bolder);
     margin: 1rem 0;
   }
   &__sub-heading {
-    @include font-s-c-w(1.8rem, $white, $bolder);
+    @include font-s-c-w(1.3rem, $white, $bolder);
   }
   &__form {
     margin: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     &__input {
       margin: 1rem 0;
       @include flex-d-a-j(row, center, center);
@@ -29,5 +28,28 @@
         border-radius: 1rem;
       }
     }
+  }
+}
+.background-video {
+  @include flex-d-a-j(column, center, center);
+  padding: 1rem;
+  background-color: #6388e0dc;
+  width: 23rem;
+  margin-right: 8vw;
+  border-radius: 20px;
+  .video {
+    height: 100%;
+    width: 100%;
+    filter: opacity(85%);
+  }
+  p {
+    text-align: center;
+    margin-top: 1rem;
+    @include font-s-c-w(0.8rem, $white, $light);
+    word-spacing: 3.5px;
+    letter-spacing: 1.5px;
+  }
+  @media (max-width: 900px) {
+    display: none;
   }
 }

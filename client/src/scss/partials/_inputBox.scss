@@ -3,7 +3,6 @@
 .inputBox {
   width: 100%;
   @include flex-d-a-j(row, flex-start, flex-start);
-
   input {
     @include input;
     flex: 1;

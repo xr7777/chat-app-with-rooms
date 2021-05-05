@@ -2,22 +2,26 @@
 
 .message {
   @include font-s-c-w(0.9rem, $white, $bolder);
+  @include flex-d-a-j(row, flex-start, flex-start);
   &__user {
     color: rgba($color: #fff, $alpha: 0.7);
   }
+  &__user {
+    color: $blue;
+    margin: auto 0 0.3rem 0.3rem;
+  }
 }
-
 .message__box {
   width: 10rem;
   padding: 0.5rem;
   border-radius: 10px;
   background-color: #db9b96;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0.5rem 1rem;
   &.admin {
     background-color: #90afc4;
   }
   &--active {
     background-color: #1a4568;
-    margin-left: auto;
+    margin: 0.5rem 1rem 0.5rem auto;
   }
 }
