@@ -10,14 +10,18 @@ const Message: React.FC<MessageProps> = ({ message, name }) => {
   }
 
   return isCurrentUser ? (
-    <div className="message__box message__box--active">
-      <p className="message__text">{message.text}</p>
-    </div>
+    <>
+      <div className="message__box message__box--active">
+        <p className="message__text">{message.text}</p>
+      </div>
+    </>
   ) : (
-    <div className={`message__box ${message.user === 'admin' && 'admin'}`}>
-      <p className="message__text">{message.text}</p>
-      <p className="message__user">- {message.user}</p>
-    </div>
+    <>
+      <div className={`message__box ${message.user === 'admin' && 'admin'}`}>
+        <p className="message__text">{message.text}</p>
+      </div>
+      <p className="message__user">{message.user}</p>
+    </>
   );
 };
 

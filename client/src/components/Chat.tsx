@@ -1,27 +1,29 @@
-import { useEffect, useState } from 'react';
 import ChatRoom from './ChatRoom';
 import InputBox from './InputBox';
 import Users from './Users';
+
+import { useEffect, useState } from 'react';
+import { RouteComponentProps } from 'react-router';
 import queryString from 'query-string';
 import io from 'socket.io-client';
-import { RouteComponentProps } from 'react-router';
 
 let socket: any;
+
+export type User = {
+  id: string;
+  name: string;
+  room: string;
+};
 
 const Chat = ({ location }: RouteComponentProps) => {
   const [name, setName] = useState<string | string[] | null>('');
   const [room, setRoom] = useState<string | string[] | null>('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState<string[]>([]);
-  const [users, setUsers] = useState<
-    {
-      id: string;
-      name: string;
-      room: string;
-    }[]
-  >();
+  const [users, setUsers] = useState<User[]>();
 
-  const ENDPOINT = 'localhost:5000';
+  // const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = 'https://chat-app-with-rooms.herokuapp.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -43,15 +45,9 @@ const Chat = ({ location }: RouteComponentProps) => {
       setMessages((messages) => [...messages, message]);
     });
 
-    socket.on(
-      'roomData',
-      (users: {
-        room: string;
-        users: { id: string; name: string; room: string }[];
-      }) => {
-        setUsers(users.users);
-      }
-    );
+    socket.on('roomData', (users: { room: string; users: User[] }) => {
+      setUsers(users.users);
+    });
   }, []);
 
   const sendMessage = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

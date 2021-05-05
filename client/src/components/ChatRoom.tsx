@@ -1,4 +1,5 @@
 import Message from './Message';
+import AutoScroll from '@brianmcallister/react-auto-scroll';
 
 interface ChatRoomProps {
   name: string | string[] | null;
@@ -16,13 +17,17 @@ const ChatRoom: React.FC<ChatRoomProps> = ({ name, room, messages }) => {
           <img className="icon--close" src="./closeIcon.png" alt="" />
         </a>
       </div>
-      <div className="chatRoom__messages">
+      <AutoScroll
+        showOption={false}
+        height={350}
+        className="chatRoom__messages"
+      >
         {messages.map((message, i) => (
           <div className="message" key={i}>
             <Message message={message} name={name} />
           </div>
         ))}
-      </div>
+      </AutoScroll>
     </div>
   );
 };
