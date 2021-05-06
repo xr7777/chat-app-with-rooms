@@ -22,7 +22,6 @@ const Chat = ({ location }: RouteComponentProps) => {
   const [messages, setMessages] = useState<string[]>([]);
   const [users, setUsers] = useState<User[]>();
 
-  // const ENDPOINT = 'localhost:5000';
   const ENDPOINT = 'https://chat-app-with-rooms.herokuapp.com/';
 
   useEffect(() => {
