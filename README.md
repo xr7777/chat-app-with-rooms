@@ -6,60 +6,66 @@ React, TypeScript, Socket.io 등을 사용해 만든 실시간 채팅 앱입니�
 
 <br>
 
+## Live demo
+
+You can check live demo [here](https://chat-app-with-rooms.vercel.app/).
+
+<br>
+
 ## Preview
 
 ![preview](https://github.com/SewookHan/chat-app-with-rooms/blob/main/preview.gif)
 
 <br>
 
-## Tech stack
+## Tech and libraries
 
-#### Client
+### Client
 
 - React
-
 - TypeScript
-
 - Sass
-
+- Socket.io client
+- query-string
+- react-auto-scroll
 - Vercel(deployment)
 
-#### Server 
+### Server 
 
-- JavsScript(Node.js)
-
+- Node.js
 - Express
-
 - Socket.io
-
 - Heroku(deployment)
 
 <br>
 
-## Set up
+## Getting Started
 
 1. Clone this repo
 
-2. Client
-
    ```
-   cd client
-   yarn
-   yarn start
+   $ git clone https://github.com/SewookHan/chat-app-with-rooms.git
    ```
 
-   - You should update `ENDPOINT` in Chat.tsx
+2. Install
 
-3.  Server 
+   - Client 
 
-   ```
-   cd server
-   npm install
-   npm run start
-   ```
+     ```
+     cd client
+     yarn
+     yarn start
+     ```
+
+     - You should update `ENDPOINT` in Chat.tsx
+
+   - Server
+
+     ```
+     cd server
+     yarn
+     yarn start
+     ```
 
 <br>
 
-## Demo
-
-[Live site](https://chat-app-with-rooms.vercel.app/)
