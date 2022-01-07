@@ -22,7 +22,7 @@ const Chat = ({ location }: RouteComponentProps) => {
   const [messages, setMessages] = useState<string[]>([]);
   const [users, setUsers] = useState<User[]>();
 
-  const ENDPOINT = 'https://chat-app-with-rooms.herokuapp.com/';
+  const ENDPOINT = 'https://website-xr7777.vercel.app/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
